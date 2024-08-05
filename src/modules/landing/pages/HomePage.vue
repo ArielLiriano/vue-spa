@@ -4,5 +4,11 @@
     <p class="mx-auto max-w-[600px] text-gray-500 md:text-xl">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
     </p>
+    <p>
+      Counter: {{ counter }}
+    </p>
+    <button class="bg-blue-500 p-5 rounded-full text-white shadow-2xl hover:bg-blue-700 transition-all font-bold" @click="counter++">+1</button>
   </div>
 </template>
+
+<script lang="ts" src="./HomePage.ts" ></script>

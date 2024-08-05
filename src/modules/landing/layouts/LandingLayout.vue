@@ -10,7 +10,7 @@
       <nav class="flex flex-col ml-auto space-x-4 items-end h-10 sm:space-x-6">
         <div class="space-x-4">
           <RouterLink to="/"> Home </RouterLink>
-          <RouterLink to="/features"> Features </RouterLink>
+          <RouterLink to="/features" > Features </RouterLink>
           <RouterLink to="/pricing"> Pricing </RouterLink>
           <RouterLink to="/contact"> Contact </RouterLink>
         </div>
@@ -24,7 +24,12 @@
 
     <!-- Main -->
     <main class="flex-1 flex items-center justify-center">
-      <RouterView />
+      <router-view v-slot="{ Component }">
+        <keep-alive>
+          <component :is="Component" />
+        </keep-alive>
+      </router-view>
+      <!-- <RouterView /> -->
     </main>
     <!-- Fin Main -->
 
